@@ -112,7 +112,7 @@
 
     async function initModel() {
       try {
-        session = await ort.InferenceSession.create("./model.onnx");
+        session = await ort.InferenceSession.create("/Ai-image-enhancer/model.onnx");
         setAppState('upload');
       } catch (error) {
         dom.modelErrorText.textContent = `Error: Failed to load model. Make sure 'model.onnx' is in the same directory as this HTML file and you are running a local server. Details: ${error.message}`;
